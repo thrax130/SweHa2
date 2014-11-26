@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<emfKalender:Year xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfKalender="http://unibw.de/emfKalender" date="2015">
+<emfKalender:Year xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfKalender="http://unibw.de/emfKalender">
   <weeks weekNumber="1">
-    <days dayNumber="1" weekDay="Do"/>
-    <days dayNumber="2" weekDay="Fr"/>
-    <days dayNumber="3" weekDay="Sa"/>
-    <days dayNumber="4" weekDay="So"/>
-  </weeks>
-  <weeks weekNumber="2">
-    <days dayNumber="5"/>
-    <days dayNumber="6" weekDay="Di"/>
+    <days dayNumber="1"/>
+    <days dayNumber="2" weekDay="Di"/>
   </weeks>
   <weeks weekNumber="3">
-    <days dayNumber="12"/>
+    <days dayNumber="11" weekDay="Do"/>
   </weeks>
-  <weeks weekNumber="6">
-    <days dayNumber="2" month="Februar"/>
-    <days dayNumber="3" month="Februar" weekDay="Di"/>
-    <days dayNumber="8" month="Februar" weekDay="So"/>
+  <weeks weekNumber="10">
+    <days dayNumber="9" month="Juni" weekDay="Fr"/>
   </weeks>
   <weeks weekNumber="13">
-    <days dayNumber="29" month="Maerz" weekDay="So"/>
-  </weeks>
-  <weeks weekNumber="52">
-    <days dayNumber="24" month="Dezember" weekDay="Do"/>
+    <days dayNumber="23" month="Februar"/>
+    <days dayNumber="24" month="Februar" weekDay="Di"/>
+    <days dayNumber="25" month="Februar" weekDay="Mi"/>
+    <days dayNumber="26" month="Februar" weekDay="Do"/>
+    <days dayNumber="27" month="Februar" weekDay="Fr"/>
+    <days dayNumber="28" month="Februar" weekDay="Sa"/>
+    <days dayNumber="1" month="Maerz" weekDay="So"/>
+    <days dayNumber="2" month="Maerz" weekDay="Mo"/>
   </weeks>
 </emfKalender:Year>

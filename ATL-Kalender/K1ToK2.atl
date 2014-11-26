@@ -32,19 +32,15 @@ rule Day1ToDay2 {
 
 helper context Kalender1!Year def : getMonths() : OrderedSet(Kalender2!Month) =
 	Sequence{#Januar,#Februar,#Maerz,#April,#Mai,#Juni,#Juli,#August,#September,#Oktober,#November,#Dezember}->iterate(enumName; seq : Sequence(OrderedSet(Kalender2!Day)) = Sequence{} |
-		
 		seq.append(self.getMonthDays(enumName)))->iterate(days; months : OrderedSet(Kalender2!Month) = OrderedSet{} |
 		if (days->size() > 0) then
 		months->append(thisModule.newMonth(days.first().month, days)) else months->append(OrderedSet{}) endif
-	);
-
+);
+	
 helper context Kalender1!Year def : getMonthDays(month : Kalender2!MonthEnum) : OrderedSet(Kalender2!Day) = (
 	let monthList : OrderedSet (Kalender1!Week) = self.weeks in 
-	self.weeks->select(week | week.getMonthName() = month)->iterate(it; m: OrderedSet(Kalender2!Day) =OrderedSet{} |
-	m.union(it.days)));
-
-helper context Kalender1!Week def : getMonthName() : Kalender2!MonthEnum = 
-	self.days.first().month;
+	self.weeks->iterate(it; m: OrderedSet(Kalender2!Day) =OrderedSet{} |
+	m.union(it.days->select(day | day.month = month))));
 
 helper context Kalender1!Day def : getWeekNumber() : Integer = 
 	self.refImmediateComposite().refGetValue('weekNumber');

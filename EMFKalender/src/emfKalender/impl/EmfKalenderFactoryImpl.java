@@ -109,8 +109,8 @@ public class EmfKalenderFactoryImpl extends EFactoryImpl implements EmfKalenderF
 		return year;
 	}
 	/**
-	 * Automatically creates model for given year
-	 * @param year - create model for year 
+	 * Creates model instance for given year
+	 * @param year - year to create model instance for 
 	 */
 	public Year createYear(Integer year) {
 		Year y = createYear();
@@ -131,7 +131,7 @@ public class EmfKalenderFactoryImpl extends EFactoryImpl implements EmfKalenderF
 					break;
 				}
 			}
-			y.getWeeks().add(w);
+			y.getWeeks().add(w); // add new week to year
 		}
 		return y;
 	}
