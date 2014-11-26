@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emfKalender1 -->
+      <package
+            uri="http://unibw.de/emfKalender"
+            class="emfKalender.EmfKalenderPackage"
+            genModel="model/emfKalender1.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated emfKalender2 -->
+      <package
+            uri="http://unibw.de/emfKalender2"
+            class="emfKalender2.EmfKalender2Package"
+            genModel="model/emfKalender2.genmodel"/>
+   </extension>
+
+</plugin>

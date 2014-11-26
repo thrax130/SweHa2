@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<emfKalender2:Year xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:emfKalender2="http://unibw.de/emfKalender2" date="2015">
+  <months>
+    <days dayNumber="1" weekDay="Do" weekNumber="1"/>
+    <days dayNumber="2" weekDay="Fr" weekNumber="1"/>
+    <days dayNumber="3" weekDay="Sa" weekNumber="1"/>
+    <days dayNumber="4" weekDay="So" weekNumber="1"/>
+    <days dayNumber="5" weekNumber="2"/>
+    <days dayNumber="6" weekDay="Di" weekNumber="2"/>
+    <days dayNumber="12" weekNumber="3"/>
+  </months>
+  <months month="Februar">
+    <days dayNumber="2" weekNumber="6"/>
+    <days dayNumber="3" weekDay="Di" weekNumber="6"/>
+    <days dayNumber="8" weekDay="So" weekNumber="6"/>
+  </months>
+  <months month="Maerz">
+    <days dayNumber="29" weekDay="So" weekNumber="13"/>
+  </months>
+  <months month="Dezember">
+    <days dayNumber="24" weekDay="Do" weekNumber="52"/>
+  </months>
+</emfKalender2:Year>

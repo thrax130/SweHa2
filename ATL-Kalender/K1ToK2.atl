@@ -1,0 +1,50 @@
+-- @path Kalender2=/EMFKalender/model/emfKalender2.ecore
+-- @path Kalender1=/EMFKalender/model/emfKalender.ecore
+
+module K1ToK2;
+create OUT : Kalender2 from IN : Kalender1;
+
+rule Year1ToYear2 {
+	from 
+	y1 : Kalender1!Year
+	to
+	y2 : Kalender2!Year(date <- y1.date.toString(),
+						months <- y1.getMonths())
+}
+
+rule newMonth (month : Kalender2!MonthEnum, days : OrderedSet(Kalender2!Day)) {
+	to
+	d : Kalender2!Month(days <- days, month <- month)
+	do {
+		d;
+	}
+}
+
+rule Day1ToDay2 {
+	from
+	d1 : Kalender1!Day
+	to
+	d2 : Kalender2!Day(
+		dayNumber <- d1.dayNumber,
+		weekDay <- d1.weekDay,
+		weekNumber <- d1.getWeekNumber())
+}
+
+helper context Kalender1!Year def : getMonths() : OrderedSet(Kalender2!Month) =
+	Sequence{#Januar,#Februar,#Maerz,#April,#Mai,#Juni,#Juli,#August,#September,#Oktober,#November,#Dezember}->iterate(enumName; seq : Sequence(OrderedSet(Kalender2!Day)) = Sequence{} |
+		
+		seq.append(self.getMonthDays(enumName)))->iterate(days; months : OrderedSet(Kalender2!Month) = OrderedSet{} |
+		if (days->size() > 0) then
+		months->append(thisModule.newMonth(days.first().month, days)) else months->append(OrderedSet{}) endif
+	);
+
+helper context Kalender1!Year def : getMonthDays(month : Kalender2!MonthEnum) : OrderedSet(Kalender2!Day) = (
+	let monthList : OrderedSet (Kalender1!Week) = self.weeks in 
+	self.weeks->select(week | week.getMonthName() = month)->iterate(it; m: OrderedSet(Kalender2!Day) =OrderedSet{} |
+	m.union(it.days)));
+
+helper context Kalender1!Week def : getMonthName() : Kalender2!MonthEnum = 
+	self.days.first().month;
+
+helper context Kalender1!Day def : getWeekNumber() : Integer = 
+	self.refImmediateComposite().refGetValue('weekNumber');

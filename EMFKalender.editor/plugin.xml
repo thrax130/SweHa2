@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated emfKalender1 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="emfKalender.presentation.EmfKalenderModelWizardID"
+            name="%_UI_EmfKalenderModelWizard_label"
+            class="emfKalender.presentation.EmfKalenderModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EmfKalenderModelFile.gif">
+         <description>%_UI_EmfKalenderModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated emfKalender1 -->
+      <editor
+            id="emfKalender.presentation.EmfKalenderEditorID"
+            name="%_UI_EmfKalenderEditor_label"
+            icon="icons/full/obj16/EmfKalenderModelFile.gif"
+            extensions="emfkalender"
+            class="emfKalender.presentation.EmfKalenderEditor"
+            contributorClass="emfKalender.presentation.EmfKalenderActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated emfKalender2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="emfKalender2.presentation.EmfKalender2ModelWizardID"
+            name="%_UI_EmfKalender2ModelWizard_label"
+            class="emfKalender2.presentation.EmfKalender2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EmfKalender2ModelFile.gif">
+         <description>%_UI_EmfKalender2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated emfKalender2 -->
+      <editor
+            id="emfKalender2.presentation.EmfKalender2EditorID"
+            name="%_UI_EmfKalender2Editor_label"
+            icon="icons/full/obj16/EmfKalender2ModelFile.gif"
+            extensions="emfkalender2"
+            class="emfKalender2.presentation.EmfKalender2Editor"
+            contributorClass="emfKalender2.presentation.EmfKalender2ActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

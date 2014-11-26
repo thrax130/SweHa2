@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/EMFKalender/src" modelPluginID="EMFKalender" modelName="EmfKalender2"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>emfKalender2.ecore</foreignModel>
+  <genPackages prefix="EmfKalender2" disposableProviderFactory="true" ecorePackage="emfKalender2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emfKalender2.ecore#//WeekDayEnum">
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Monday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Tuesday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Wednesday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Thursday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Friday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Saturday"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//WeekDayEnum/Sunday"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="emfKalender2.ecore#//MonthEnum">
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Januar"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Februar"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Maerz"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/April"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Mai"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Juni"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Juli"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/August"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/September"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Oktober"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/November"/>
+      <genEnumLiterals ecoreEnumLiteral="emfKalender2.ecore#//MonthEnum/Dezember"/>
+    </genEnums>
+    <genClasses ecoreClass="emfKalender2.ecore#//Year">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfKalender2.ecore#//Year/date"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfKalender2.ecore#//Year/months"/>
+    </genClasses>
+    <genClasses ecoreClass="emfKalender2.ecore#//Month">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference emfKalender2.ecore#//Month/days"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfKalender2.ecore#//Month/month"/>
+    </genClasses>
+    <genClasses ecoreClass="emfKalender2.ecore#//Day">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfKalender2.ecore#//Day/dayNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfKalender2.ecore#//Day/weekDay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute emfKalender2.ecore#//Day/weekNumber"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

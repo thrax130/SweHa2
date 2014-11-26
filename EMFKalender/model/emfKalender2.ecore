@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="emfKalender2" nsURI="http://unibw.de/emfKalender2" nsPrefix="emfKalender2">
+  <eClassifiers xsi:type="ecore:EClass" name="Year">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="months" upperBound="52"
+        eType="#//Month" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Month">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="days" upperBound="31" eType="#//Day"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="month" eType="#//MonthEnum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Day">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dayNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weekDay" eType="#//WeekDayEnum"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="weekNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="WeekDayEnum">
+    <eLiterals name="Monday" value="1" literal="Mo"/>
+    <eLiterals name="Tuesday" value="2" literal="Di"/>
+    <eLiterals name="Wednesday" value="3" literal="Mi"/>
+    <eLiterals name="Thursday" value="4" literal="Do"/>
+    <eLiterals name="Friday" value="5" literal="Fr"/>
+    <eLiterals name="Saturday" value="6" literal="Sa"/>
+    <eLiterals name="Sunday" value="7" literal="So"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MonthEnum">
+    <eLiterals name="Januar" value="1"/>
+    <eLiterals name="Februar" value="2"/>
+    <eLiterals name="Maerz" value="3"/>
+    <eLiterals name="April" value="4"/>
+    <eLiterals name="Mai" value="5"/>
+    <eLiterals name="Juni" value="6"/>
+    <eLiterals name="Juli" value="7"/>
+    <eLiterals name="August" value="8"/>
+    <eLiterals name="September" value="9"/>
+    <eLiterals name="Oktober" value="10"/>
+    <eLiterals name="November" value="11"/>
+    <eLiterals name="Dezember" value="12"/>
+  </eClassifiers>
+</ecore:EPackage>
