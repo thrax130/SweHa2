@@ -124,11 +124,11 @@ public class WeekItemProvider
 	 * This returns Week.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Week"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Week.png"));
 	}
 
 	/**

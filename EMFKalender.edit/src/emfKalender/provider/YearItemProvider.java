@@ -124,11 +124,11 @@ public class YearItemProvider
 	 * This returns Year.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Year"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Year.png"));
 	}
 
 	/**
